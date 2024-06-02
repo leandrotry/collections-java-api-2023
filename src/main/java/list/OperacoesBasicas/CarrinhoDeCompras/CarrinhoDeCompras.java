@@ -1,4 +1,4 @@
-package main.java.list.CarrinhoDeCompras;
+package main.java.list.OperacoesBasicas.CarrinhoDeCompras;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,26 +12,35 @@ public class CarrinhoDeCompras {
     }
 
     public void adicionarItem(String nome, double preco, int quantidade){
-        listaDeItems.add(new Item(nome, preco, quantidade));
+        Item item = new Item(nome, preco, quantidade);
+        listaDeItems.add(item);
     }
     public void removerItem(String nome){
         List<Item> itemsParaRemover = new ArrayList<>();
-        for(Item i: listaDeItems){
-        if(i.getNome().equalsIgnoreCase(nome)){
-            itemsParaRemover.add(i);
+        if(!listaDeItems.isEmpty()) {
+            for (Item i : listaDeItems) {
+                if (i.getNome().equalsIgnoreCase(nome)) {
+                    itemsParaRemover.add(i);
+                }
             }
+            listaDeItems.removeAll(itemsParaRemover);
+        } else {
+            System.out.println("Lista Vazia!");
         }
-        listaDeItems.removeAll(itemsParaRemover);
     }
     public void exibirItens(){
         System.out.println(listaDeItems);
     }
     public double calcularValorTotal(){
         double valorTotalCarrinho = 0;
-        for (Item i: listaDeItems){
-            valorTotalCarrinho += i.getPreço() * i.getQuantidade();
+        if(!listaDeItems.isEmpty()) {
+            for (Item i : listaDeItems) {
+                valorTotalCarrinho += i.getPreço() * i.getQuantidade();
+            }
+            return valorTotalCarrinho;
+        }else{
+            throw new RuntimeException("Lista vazia!");
         }
-        return valorTotalCarrinho;
     }
 
     public static void main(String[] args) {
@@ -41,6 +50,8 @@ public class CarrinhoDeCompras {
         carrinho.adicionarItem("teclado", 250, 1);
         System.out.println("total "+ carrinho.calcularValorTotal());
         carrinho.removerItem("mouse");
+        carrinho.removerItem("teclado");
+        carrinho.removerItem("teclado");
         carrinho.exibirItens();
         System.out.println("total "+carrinho.calcularValorTotal());
     }
