@@ -11,7 +11,8 @@ public class OrdenacaoPessoa {
     }
 
     public void adicionarPessoa(String nome, int idade, double altura){
-        pessoaList.add(nome, idade, altura);
+        Pessoa pessoa = new Pessoa(nome, idade, altura);
+        pessoaList.add(pessoa);
     }
 
     public List<Pessoa> ordenarPorIdade(){
@@ -19,5 +20,19 @@ public class OrdenacaoPessoa {
         Collections.sort(pessoasPorIdade);
         return pessoasPorIdade;
     }
+    public List<Pessoa> ordenarPorAltura(){
+        List<Pessoa> pessoasPorAltura = new ArrayList<>(pessoaList);
+        Collections.sort(pessoasPorAltura, new ComparatorPorAltura());
+        return pessoasPorAltura;
+    }
 
+    public static void main(String[] args) {
+        OrdenacaoPessoa pessoa = new OrdenacaoPessoa();
+        pessoa.adicionarPessoa("leandro", 27, 1.82);
+        pessoa.adicionarPessoa("camila", 25, 1.70);
+        pessoa.adicionarPessoa("cida", 53, 1.65);
+        System.out.println(pessoa.ordenarPorIdade());
+        System.out.println(pessoa.ordenarPorAltura());
+
+    }
 }
