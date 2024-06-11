@@ -1,4 +1,4 @@
-package main.java.list.OperacoesBasicas.CatalogoDeLivros;
+package main.java.list.OperacoesBasicas.List.CatalogoDeLivros;
 
 public class Livro {
     private String titulo;
