@@ -1,6 +1,7 @@
 package main.java.list.OperacoesBasicas.CarrinhoDeCompras;
 
-public class Item {
+public class
+Item {
     private String nome;
     private double preço;
     private int quantidade;
