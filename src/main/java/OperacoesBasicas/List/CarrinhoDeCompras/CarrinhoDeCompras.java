@@ -1,4 +1,4 @@
-package main.java.list.OperacoesBasicas.List.CarrinhoDeCompras;
+package main.java.OperacoesBasicas.List.CarrinhoDeCompras;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ public class CarrinhoDeCompras {
         double valorTotalCarrinho = 0;
         if(!listaDeItems.isEmpty()) {
             for (Item i : listaDeItems) {
-                valorTotalCarrinho += i.getPreço() * i.getQuantidade();
+                valorTotalCarrinho += i.getPreco() * i.getQuantidade();
             }
             return valorTotalCarrinho;
         }else{

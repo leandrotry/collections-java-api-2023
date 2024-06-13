@@ -1,4 +1,4 @@
-package main.java.list.OperacoesBasicas.List.ListaDeTarefas;
+package main.java.OperacoesBasicas.List.ListaDeTarefas;
 
 import java.util.ArrayList;
 import java.util.List;

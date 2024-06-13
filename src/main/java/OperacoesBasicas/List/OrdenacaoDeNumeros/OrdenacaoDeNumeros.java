@@ -1,4 +1,4 @@
-package main.java.list.OperacoesBasicas.List.OrdenacaoDeNumeros;
+package main.java.OperacoesBasicas.List.OrdenacaoDeNumeros;
 
 import java.util.ArrayList;
 import java.util.Collections;

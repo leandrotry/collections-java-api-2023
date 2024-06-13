@@ -1,21 +1,21 @@
-package main.java.list.OperacoesBasicas.List.CarrinhoDeCompras;
+package main.java.OperacoesBasicas.List.CarrinhoDeCompras;
 
 public class
 Item {
     private String nome;
-    private double preço;
+    private double preco;
     private int quantidade;
 
-    public Item(String nome, double preço, int quantidade) {
+    public Item(String nome, double preco, int quantidade) {
         this.nome = nome;
-        this.preço = preço;
+        this.preco = preco;
         this.quantidade = quantidade;
     }
     public String getNome(){
         return this.nome;
     }
-    public double getPreço(){
-        return this.preço;
+    public double getPreco(){
+        return this.preco;
     }
 
     public int getQuantidade() {
@@ -26,7 +26,7 @@ Item {
     public String toString() {
         return "Item{" +
                 "nome='" + nome + '\'' +
-                ", preço=" + preço +
+                ", preço=" + preco +
                 ", quantidade=" + quantidade +
                 '}';
     }

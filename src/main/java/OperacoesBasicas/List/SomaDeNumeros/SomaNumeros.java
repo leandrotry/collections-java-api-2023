@@ -1,4 +1,4 @@
-package main.java.list.OperacoesBasicas.List.SomaDeNumeros;
+package main.java.OperacoesBasicas.List.SomaDeNumeros;
 
 import java.util.ArrayList;
 import java.util.List;

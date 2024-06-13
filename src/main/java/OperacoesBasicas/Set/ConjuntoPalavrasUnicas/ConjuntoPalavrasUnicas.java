@@ -1,4 +1,4 @@
-package main.java.list.OperacoesBasicas.Set.ConjuntoPalavrasUnicas;
+package main.java.OperacoesBasicas.Set.ConjuntoPalavrasUnicas;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -34,7 +34,7 @@ public class ConjuntoPalavrasUnicas {
         //return palavraUnica.contains(palavra) ? palavra: "Não contem a palavra buscada!";
     }
 
-    public Set<String> imprimirConjunto(){
+    public Set<String> exibirPalavrasUnicas(){
         return palavraUnica;
     }
 
@@ -53,9 +53,9 @@ public class ConjuntoPalavrasUnicas {
         conjunto.adicionarPalavra("teste");
         conjunto.adicionarPalavra("void");
 
-        System.out.println(conjunto.imprimirConjunto());
+        System.out.println(conjunto.exibirPalavrasUnicas());
         conjunto.removerPalavra("zeandro");
-        System.out.println(conjunto.imprimirConjunto());
+        System.out.println(conjunto.exibirPalavrasUnicas());
         System.out.println("Buscado: " + conjunto.verificarPalavra("Leandro"));
     }
 }
